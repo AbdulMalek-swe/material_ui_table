@@ -41,11 +41,18 @@ const EnhanceTableHead = ({ headCells,
             <TableRow>
                 <TableCell padding="checkbox">
                     <Checkbox
+
                         indeterminate={numSelected > 0 && numSelected < rowCount}
                         checked={rowCount > 0 && numSelected === rowCount}
                         onChange={onSelectAllClick}
                         inputProps={{
                             "aria-label": "select all desserts",
+                        }}
+                        sx={{
+                            color: "#ced4da",
+                            '&.Mui-checked': {
+                                color: "#405189"
+                            }
                         }}
                     />
                 </TableCell>

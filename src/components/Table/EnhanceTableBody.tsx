@@ -68,6 +68,12 @@ const EnhanceTableBody = ({
                                 inputProps={{
                                     "aria-labelledby": "1",
                                 }}
+                                sx={{
+                                    color: "#ced4da",
+                                    '&.Mui-checked': {
+                                        color: "#405189"
+                                    }
+                                }}
                             />
                         </TableCell>
 

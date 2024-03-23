@@ -2,7 +2,7 @@
 import Table from '@/components/Table/Table'
 import KeepMountedModal from '@/components/Table/modal/Moda';
 import { headCellsProps, rowDataProps } from '@/components/Table/types';
-import { Button } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import Image from 'next/image'
 import { useState } from 'react';
 import { CiEdit } from "react-icons/ci";
@@ -46,11 +46,13 @@ export default function Home() {
       numeric: false,
       disablePadding: false,
       label: "Actions",
-      render: () => <div>
-        <Button onClick={handleOpen}><CiEdit /></Button>
+      render: () => <Box>
+        <Button onClick={handleOpen} sx={{
+          color: "#ced4da"
+        }}><CiEdit /></Button>
         <Button onClick={handleOpen}><MdOutlineDeleteOutline /></Button>
         <KeepMountedModal open={open} setOpen={setOpen} />
-      </div>
+      </Box>
     },
   ];
   const rowData: rowDataProps[] = [
